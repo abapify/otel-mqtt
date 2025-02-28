@@ -4,7 +4,7 @@ class ZCL_OTEL_PUBLISHER_MQTT definition
 
 public section.
 
-  interfaces ZIF_OTEL_MSG_BUS .
+  interfaces ZIF_OTEL_STREAM .
   interfaces ZIF_OTEL_PUBLISHER .
 
   methods CONSTRUCTOR
@@ -41,7 +41,7 @@ CLASS ZCL_OTEL_PUBLISHER_MQTT IMPLEMENTATION.
   endmethod.
 
 
-  method ZIF_OTEL_MSG_BUS~PUBLISH.
+  method ZIF_OTEL_STREAM~PUBLISH.
 
     check me->client is bound.
 
